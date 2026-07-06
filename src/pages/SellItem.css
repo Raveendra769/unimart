@@ -1,0 +1,194 @@
+/* ===========================
+   SELL PAGE
+=========================== */
+
+.sell-container{
+    width:95%;
+    max-width:700px;
+    margin:50px auto;
+}
+
+.sell-container h1{
+    text-align:center;
+    color:white;
+    margin-bottom:30px;
+    font-size:38px;
+}
+
+/* ===========================
+   FORM
+=========================== */
+
+.sell-form{
+    background:#1b2543;
+    padding:35px;
+    border-radius:20px;
+    box-shadow:0 15px 40px rgba(0,0,0,.35);
+
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+}
+
+/* ===========================
+   IMAGE UPLOAD
+=========================== */
+
+.upload-box{
+
+    border:2px dashed #3b82f6;
+
+    border-radius:16px;
+
+    height:260px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    position:relative;
+
+    overflow:hidden;
+
+    cursor:pointer;
+
+    background:#111827;
+}
+
+.upload-box p{
+
+    color:#94a3b8;
+
+    font-size:18px;
+}
+
+.upload-box img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+}
+
+.upload-box input{
+
+    position:absolute;
+
+    inset:0;
+
+    opacity:0;
+
+    cursor:pointer;
+}
+
+/* ===========================
+   INPUTS
+=========================== */
+
+.sell-form input,
+.sell-form select,
+.sell-form textarea{
+
+    width:100%;
+
+    padding:15px;
+
+    border:none;
+
+    outline:none;
+
+    border-radius:12px;
+
+    background:#111827;
+
+    color:white;
+
+    font-size:16px;
+
+    border:1px solid #334155;
+
+    transition:.3s;
+}
+
+.sell-form textarea{
+
+    resize:none;
+}
+
+.sell-form input:focus,
+.sell-form select:focus,
+.sell-form textarea:focus{
+
+    border-color:#3b82f6;
+
+    box-shadow:0 0 12px rgba(59,130,246,.35);
+}
+
+.sell-form input::placeholder,
+.sell-form textarea::placeholder{
+
+    color:#94a3b8;
+}
+
+/* ===========================
+   BUTTON
+=========================== */
+
+.sell-form button{
+
+    padding:16px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:linear-gradient(90deg,#2563eb,#22c55e);
+
+    color:white;
+
+    font-size:18px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.sell-form button:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 12px 25px rgba(37,99,235,.35);
+}
+
+/* ===========================
+   MOBILE
+=========================== */
+
+@media(max-width:768px){
+
+.sell-container{
+
+    width:94%;
+}
+
+.sell-container h1{
+
+    font-size:30px;
+}
+
+.sell-form{
+
+    padding:20px;
+}
+
+.upload-box{
+
+    height:220px;
+}
+
+}
