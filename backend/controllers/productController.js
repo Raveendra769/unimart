@@ -1,13 +1,15 @@
-const Product=require("../models/product");
+const Product=require("../models/Product");
+
 exports.createProduct = async (req, res) => {
     try{
         const title = req.body.title;
 const price = req.body.price;
 const description = req.body.description;
-    const product = await Product.create({
-     title,
-     price,
-     description,
+const product = await Product.create({
+    title,
+    price,
+    description,
+    image: req.file ? req.file.filename : null,
     seller: req.user._id
 });
 return res.status(201).json({
@@ -24,7 +26,7 @@ return res.status(201).json({
 };
 exports.getAllProducts = async (req, res) => {
     try{
-const products=await Product.find();
+const products = await Product.find().populate("seller", "name email");
 return res.status(200).json({
     products
 })

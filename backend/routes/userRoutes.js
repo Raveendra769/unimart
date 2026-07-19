@@ -10,4 +10,9 @@ router.get(
     authMiddleware,
     userController.getProfile
 );
+router.post("/cart/:id", authMiddleware, userController.addToCart);
+
+router.get("/cart", authMiddleware, userController.getCart);
+
+router.delete("/cart/:id", authMiddleware, userController.removeFromCart);
 module.exports = router;
